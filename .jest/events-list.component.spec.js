@@ -43315,6 +43315,9 @@ If '${name}' is a directive input, make sure the directive is imported by the cu
             <button [routerLink]="['event/' + event.id]" class="btn btn-info">\r
               <i class="fa fa-pencil"></i>\r
             </button>\r
+            <button (click)="onDelete(event)" class="btn btn-danger">\r
+              <i class="fa fa-trash"></i>\r
+            </button>\r
           </div>\r
         </td>\r
       </tr>\r
@@ -47232,6 +47235,8 @@ If '${name}' is a directive input, make sure the directive is imported by the cu
           this.eventList$ = this.eventService.getAll();
         }
         ngOnInit() {
+        }
+        onDelete(event) {
         }
       };
       EventsListComponent = __decorateClass([
