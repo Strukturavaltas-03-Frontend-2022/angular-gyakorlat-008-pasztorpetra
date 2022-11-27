@@ -50998,6 +50998,13 @@ If '${name}' is a directive input, make sure the directive is imported by the cu
         }
         ngOnInit() {
         }
+        onUpdate(form, event) {
+          if (event.id === 0) {
+            this.eventService.create(event).subscribe((ev) => this.router.navigate([""]));
+          } else {
+            this.eventService.update(event).subscribe((ev) => this.router.navigate([""]));
+          }
+        }
       };
       EventEditorComponent = __decorateClass([
         Component({
